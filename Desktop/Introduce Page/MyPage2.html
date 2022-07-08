@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyPage2</title>
+    <style>
+
+        html {
+            height: 100%;
+        }
+        body::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .wB {
+            height: 100px;
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: -100px;
+            background-color: rgb(150, 45, 176);
+            z-index: 1;
+            font-size: 48px;
+            color: black;
+            text-align: center;
+            line-height: 1px;
+            transition: top 0.5s;
+        }
+
+        button {
+            background-color: black;
+            border: 8px solid black;
+            border-radius: 7%;
+            margin: 15px 15px auto;
+            width: 100px;
+            height: 60px;
+            font-weight: bold;
+            color: rgb(150, 45, 176);
+            transition-timing-function: ease-out;
+            transition-duration: 0.15s;
+        }
+
+        #container1 {
+            color:white;
+            right:50px;
+            left:50px;
+            position: absolute;
+        }
+
+        #bt1:hover {
+            transform: scale(1.08);
+            background-color: rgb(44, 65, 11);
+            border: 8px solid rgb(44, 65, 11);
+        }
+
+        body {
+            padding: 110px;
+            background-color: black;
+
+        }
+
+        #box {
+            background-color: rgb(150, 45, 176);
+            height: 50px;
+            width: 1000px;
+            color: white;
+            margin-top: 500px;
+        }
+
+
+        #paragBt1 {
+            background-color: black;
+            border: 7px solid white;
+            width: 400px;
+            height: 280px;
+            position: relative;
+            margin: 120px 30px 120px 60px;
+            transition-timing-function: ease-out;
+            transition-duration: 0.15s;
+            font-size: 36px;
+            float: left;
+        }
+
+        #paragBt1:hover {
+            transform: scale(1.05);
+            background-color: rgb(52, 52, 52);
+            font-size: 240%;
+            cursor: pointer;
+        }
+
+        #paragBt2 {
+            background-color: black;
+            border: 7px solid white;
+            width: 400px;
+            height: 280px;
+            position: relative;
+            margin: 120px 30px;
+            transition-timing-function: ease-out;
+            transition-duration: 0.15s;
+            font-size: 36px;
+            float: left;
+        }
+
+        #paragBt2:hover {
+            transform: scale(1.05);
+            background-color: rgb(52, 52, 52);
+            font-size: 240%;
+            cursor: pointer;
+        }
+
+        #paragBt3 {
+            background-color: black;
+            border: 7px solid white;
+            width: 400px;
+            height: 280px;
+            position: relative;
+            margin: 120px 30px;
+            transition-timing-function: ease-out;
+            transition-duration: 0.15s;
+            font-size: 36px;
+            float: left;
+        }
+
+        #paragBt3:hover {
+            transform: scale(1.05);
+            background-color: rgb(52, 52, 52);
+            font-size: 240%;
+            cursor: pointer;
+        }
+
+        #paragBt1:active    {
+            border: 7px solid black;
+        }
+
+        #paragBt2:active    {
+            border: 7px solid black;
+        }
+
+        #paragBt3:active    {
+            border: 7px solid black;
+        }
+
+        #parag1 {
+            margin-top: 600px;
+            display: none;
+            font-size: 30px;
+            font-weight: bold;
+            color: white;
+            line-height: 1.5em;
+        }
+
+        #parag2 {
+            margin-top: 600px;
+            display: none;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            color: white;
+            line-height: 1.5em;
+        }
+
+        #parag3 {
+            margin-top: 600px;
+            display: none;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            color: white;
+            line-height: 1.5em;
+        }
+
+        #parag4 {
+            margin-top: 600px;
+            display: none;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            color: white;
+            line-height: 1.75em;
+        }
+
+        #div1Img1 {
+            width:125px;
+            height: 125px;
+            background-color: white;
+            border: 2px solid white;
+            border-radius: 5%;
+            margin-right: 15px;
+            display: flex;
+            float: left;
+        }
+
+        
+        #div1Img2 {
+            width:125px;
+            height: 125px;
+            border: 2px solid white;
+            background-color: white;
+            border-radius: 5%;
+            margin-right: 15px;
+            display: flex;
+            float: left;
+        }
+
+        #div1Img3 {
+            width:125px;
+            height: 125px;
+            border: 2px solid white;
+            background-color: white;
+            border-radius: 5%;
+            margin-right: 15px;
+            display: flex;
+            float: left;
+        }
+
+        #parag1 div {
+            vertical-align: top;
+            text-align: left;
+        }
+
+        #parag1 div h4 {
+            display: flex;
+            float: left;
+        }
+        
+        #div1Img1:hover {
+            cursor: pointer;
+        }
+
+        #div1Img1:active {
+            animation-duration: 0.5s;
+            animation: slidein;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-timing-function: ease-out;
+            animation-duration: 1s;
+        }
+
+        @keyframes slidein {
+            from {
+                background-color: white;
+                border-radius: 5%;
+                scale: 1;
+            }
+
+            to {
+                background-color: blueviolet;
+                background-image: none;
+                border-radius: 100%;
+                scale: 0.3;
+            }
+        }
+
+        #footer {
+            font-size: 15px;
+            color: white;
+            line-height: 1.75em;
+            text-align: center;
+            padding: 20px auto;
+            display: none;
+        }
+
+        #time {
+            display: inline-block;
+            margin-top: 30px;
+        }
+
+        #date {
+            display: inline-block;
+            margin-top: 30px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div id="workbar" class="wB">
+        <h3>About Kim Jun Gyoung...</h3>
+    </div>
+    <div id="container1">
+        <button id="paragBt1" onclick="showparag1 ()">나는...</button>
+        <button id="paragBt2" onclick="showparag2 ()">나의 장점</button>
+        <button id="paragBt3" onclick="showparag3 ()">나의 능력</button>
+    </div>
+
+    <div id="parag1">
+        <div>
+            <img id="div1Img1" src="images/PartyHat.png">   
+            <h4 id="paraGraph1">2006.05.09<br>부산에서 태어났습니다.</h4>
+        </div>
+        <div>
+            <img id="div1Img2" src="images/Family.png">
+            <h4>부모님과 누나가 한명 있습니다.</h4>
+        </div>
+        <div>
+            <img id="div1Img3" src="images/Exercise.png">
+            <h4>운동하는 것을 좋아합니다.</h4>
+        </div>
+    </div>
+
+    <div id="parag2">
+        
+    </div>
+
+    <div id="parag3">
+        국회의 회의는 공개한다. 다만, 출석의원 과반수의 찬성이 있거나 의장이 국가의 안전보장을 위하여 필요하다고 인정할 때에는 공개하지 아니할 수 있다. 국무회의는 대통령·국무총리와 15인 이상 30인 이하의 국무위원으로 구성한다. 모든 국민은 신체의 자유를 가진다. 누구든지 법률에 의하지 아니하고는 체포·구속·압수·수색 또는 심문을 받지 아니하며, 법률과 적법한 절차에 의하지 아니하고는 처벌·보안처분 또는 강제노역을 받지 아니한다. 국가원로자문회의의 조직·직무범위 기타 필요한 사항은 법률로 정한다. 공개하지 아니한 회의내용의 공표에 관하여는 법률이 정하는 바에 의한다. 대통령은 법률이 정하는 바에 의하여 훈장 기타의 영전을 수여한다.
+
+        선거에 있어서 최고득표자가 2인 이상인 때에는 국회의 재적의원 과반수가 출석한 공개회의에서 다수표를 얻은 자를 당선자로 한다. 국회는 국가의 예산안을 심의·확정한다. 대통령·국무총리·국무위원·행정각부의 장·헌법재판소 재판관·법관·중앙선거관리위원회 위원·감사원장·감사위원 기타 법률이 정한 공무원이 그 직무집행에 있어서 헌법이나 법률을 위배한 때에는 국회는 탄핵의 소추를 의결할 수 있다. 대통령은 헌법과 법률이 정하는 바에 의하여 국군을 통수한다. 대통령은 조국의 평화적 통일을 위한 성실한 의무를 진다. 법관이 중대한 심신상의 장해로 직무를 수행할 수 없을 때에는 법률이 정하는 바에 의하여 퇴직하게 할 수 있다.
+    </div>
+
+    <div id="parag4">
+        내용이 궁금하면 버튼을 클릭해 주세요!
+    </div>
+
+    <div id="footer">
+        <hr style="
+        border: 2.5px solid #ccc;
+        width: 100%;">
+
+        <h3 id="date"></h3>
+        <h3 id="time"></h3>
+    </div>
+
+    <script>
+        let paragBt1=document.getElementById("paragBt1");
+        let paragBt2=document.getElementById("paragBt2");
+        let paragBt3=document.getElementById("paragBt3");
+
+        let parag1=document.getElementById("parag1");
+        let parag2=document.getElementById("parag2");
+        let parag3=document.getElementById("parag3");
+        let parag4=document.getElementById("parag4");
+        let fooTer=document.getElementById("footer");
+
+        let paraGraph1 = document.getElementById("paraGraph1");
+        let bt1 = document.getElementById("bt1");
+
+    function setClock(){
+        let dateInfo = new Date (); 
+        let hour = modifyNumber(dateInfo.getHours ());
+        let min = modifyNumber(dateInfo.getMinutes ());
+        let sec = modifyNumber(dateInfo.getSeconds ());
+        let year = dateInfo.getFullYear();
+        let month = dateInfo.getMonth() + 1;
+        let date = dateInfo.getDate();
+
+        document.getElementById("time").innerHTML = hour + ":" + min  + ":" + sec;
+        document.getElementById("date").innerHTML = year + "." + month + "." + date + " /";
+    }
+    function modifyNumber(time){
+        if(parseInt(time)<10){
+            return "0"+ time;
+        }
+        else
+            return time;
+    }
+        onload = function(){
+        setClock();
+        setInterval(setClock,1000);x
+    }  
+
+        document.addEventListener('scroll', onScroll, { passive: true });
+        function onScroll () {
+            const scrollposition = pageYOffset;
+            const nav = document.querySelector('nav');
+
+            if (200<=scrollposition){
+                document.getElementById('workbar').style.top = '0';
+            }
+            else{
+                document.getElementById('workbar').style.top = '-100px';
+            }
+        } 
+
+        function showparag1 () {
+            paragBt1.style.opacity=('1');
+            paragBt2.style.opacity=('0.3');
+            paragBt3.style.opacity=('0.3');
+            /* ParaGraph 1*/
+            parag1.style.display="grid";
+            parag1.style.gridTemplateColumns="repeat(2, 1fr)";
+            parag1.style.gridTemplateRows="repeat(4, minmax(1fr, auto))";
+            parag1.style.gap="50px 40px";
+            parag2.style.display="none";
+            parag3.style.display="none";
+            parag4.style.display="none";
+            fooTer.style.display="block";
+        }
+
+        function showparag2 () {
+            paragBt1.style.opacity=('0.3');
+            paragBt2.style.opacity=('1');
+            paragBt3.style.opacity=('0.3');
+            parag1.style.display="none";
+            parag2.style.display="block";
+            parag3.style.display="none";
+            parag4.style.display="none";
+            fooTer.style.display="block";
+        }
+
+        function showparag3 () {
+            paragBt1.style.opacity=('0.3');
+            paragBt2.style.opacity=('0.3');
+            paragBt3.style.opacity=('1');
+            parag1.style.display="none";
+            parag2.style.display="none";
+            parag3.style.display="block";
+            parag4.style.display="none";
+            fooTer.style.display="block";
+        }
+    </script>
+
+</body>
+</html>
