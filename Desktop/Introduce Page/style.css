@@ -1,0 +1,333 @@
+
+        html {
+            height: 100%;
+        }
+        body::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .wB {
+            height: 100px;
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: -100px;
+            background-color: rgb(150, 45, 176);
+            z-index: 1;
+            font-size: 48px;
+            color: black;
+            text-align: center;
+            line-height: 1px;
+            transition: top 0.5s;
+        }
+
+        button {
+            background-color: black;
+            border: 8px solid black;
+            border-radius: 7%;
+            margin: 15px 15px auto;
+            width: 100px;
+            height: 60px;
+            font-weight: bold;
+            color: rgb(150, 45, 176);
+            transition-timing-function: ease-out;
+            transition-duration: 0.15s;
+        }
+
+        #container1 {
+            color:white;
+            right:50px;
+            left:50px;
+            position: absolute;
+        }
+
+        #bt1:hover {
+            transform: scale(1.08);
+            background-color: rgb(44, 65, 11);
+            border: 8px solid rgb(44, 65, 11);
+        }
+
+        body {
+            padding: 110px;
+            background-color: black;
+
+        }
+
+        #box {
+            background-color: rgb(150, 45, 176);
+            height: 50px;
+            width: 1000px;
+            color: white;
+            margin-top: 500px;
+        }
+
+
+        #paragBt1 {
+            background-color: black;
+            border: 7px solid white;
+            width: 400px;
+            height: 280px;
+            position: relative;
+            margin: 120px 30px 120px 60px;
+            transition-timing-function: ease-out;
+            transition-duration: 0.15s;
+            font-size: 36px;
+            float: left;
+        }
+
+        #paragBt1:hover {
+            transform: scale(1.05);
+            background-color: rgb(52, 52, 52);
+            font-size: 240%;
+            cursor: pointer;
+        }
+
+        #paragBt2 {
+            background-color: black;
+            border: 7px solid white;
+            width: 400px;
+            height: 280px;
+            position: relative;
+            margin: 120px 30px;
+            transition-timing-function: ease-out;
+            transition-duration: 0.15s;
+            font-size: 36px;
+            float: left;
+        }
+
+        #paragBt2:hover {
+            transform: scale(1.05);
+            background-color: rgb(52, 52, 52);
+            font-size: 240%;
+            cursor: pointer;
+        }
+
+        #paragBt3 {
+            background-color: black;
+            border: 7px solid white;
+            width: 400px;
+            height: 280px;
+            position: relative;
+            margin: 120px 30px;
+            transition-timing-function: ease-out;
+            transition-duration: 0.15s;
+            font-size: 36px;
+            float: left;
+        }
+
+        #paragBt3:hover {
+            transform: scale(1.05);
+            background-color: rgb(52, 52, 52);
+            font-size: 240%;
+            cursor: pointer;
+        }
+
+        #paragBt1:active    {
+            border: 7px solid black;
+        }
+
+        #paragBt2:active    {
+            border: 7px solid black;
+        }
+
+        #paragBt3:active    {
+            border: 7px solid black;
+        }
+
+        #parag1 {
+            margin-top: 600px;
+            display: none;
+            font-size: 30px;
+            font-weight: bold;
+            color: white;
+            line-height: 1.5em;
+        }
+
+        #parag2 {
+            margin-top: 600px;
+            display: none;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            color: white;
+            line-height: 1.5em;
+        }
+
+        #parag3 {
+            margin-top: 600px;
+            display: none;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            color: white;
+            line-height: 1.5em;
+        }
+
+        #parag4 {
+            margin-top: 600px;
+            display: none;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            color: white;
+            line-height: 1.75em;
+            background-color: white;
+        }
+
+        #div1Img1 {
+            width:125px;
+            height: 125px;
+            background-color: white;
+            border: 2px solid white;
+            border-radius: 5%;
+            margin-right: 15px;
+            display: flex;
+            float: left;
+        }
+
+        
+        #div1Img2 {
+            width:125px;
+            height: 125px;
+            border: 2px solid white;
+            background-color: white;
+            border-radius: 5%;
+            margin-right: 15px;
+            display: flex;
+            float: left;
+        }
+
+        #div1Img3 {
+            width:125px;
+            height: 125px;
+            border: 2px solid white;
+            background-color: white;
+            border-radius: 5%;
+            margin-right: 15px;
+            display: flex;
+            float: left;
+        }
+        #div1Img4 {
+            width:125px;
+            height: 125px;
+            border: 2px solid white;
+            background-color: white;
+            border-radius: 5%;
+            margin-right: 15px;
+            display: flex;
+            float: left;
+        }
+
+        #parag1 div {
+            vertical-align: top;
+            text-align: left;
+        }
+
+        #parag1 div h4 {
+            display: flex;
+            float: left;
+        }
+        
+        #div1Img1:hover {
+            cursor: pointer;
+        }
+
+        #div1Img1:active {
+            animation-duration: 0.5s;
+            animation: slidein;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-timing-function: ease-out;
+            animation-duration: 1s;
+        }
+
+        @keyframes slidein {
+            from {
+                background-color: white;
+                border-radius: 5%;
+                scale: 1;
+            }
+
+            to {
+                background-color: blueviolet;
+                background-image: none;
+                border-radius: 100%;
+                scale: 0.3;
+            }
+        }
+
+        #footer {
+            font-size: 15px;
+            color: white;
+            line-height: 1.75em;
+            text-align: center;
+            padding: 20px auto;
+            display: none;
+            margin-top: 120px;
+        }
+
+        #time {
+            display: inline-block;
+            margin-top: 30px;
+        }
+
+        #date {
+            display: inline-block;
+            margin-top: 30px;
+        }
+
+        #sidebarLeft {
+            top: 40%;
+            left: 10px;
+            width: 60px;
+            height: 150px;
+            font-size: 35px;
+            color: black;
+            background-color: rgb(150, 45, 176);
+            text-align: center;
+            vertical-align: middle;
+            position: fixed;
+            transition-timing-function: ease-out;
+            transition-duration: 0.3s;
+            border-radius: 10%;
+            border: 7px solid white;
+            opacity: 0;
+        }
+
+        #sidebarLeft:hover {
+            width: 70px;
+            opacity: 1;
+            transition-timing-function: ease-out;
+            transition-duration: 0.25s;
+            cursor: pointer;
+        }
+
+        #sidebarRight:hover {
+            width: 70px;
+            opacity: 1;
+            transition-timing-function: ease-out;
+            transition-duration: 0.25s;
+            cursor: pointer;
+        }
+
+        #sidebarRight {
+            top: 40%;
+            width: 60px;
+            height: 150px;
+            font-size: 35px;
+            color: black;
+            background-color: rgb(150, 45, 176);
+            text-align: center;
+            vertical-align: middle;
+            position: fixed;
+            transition-timing-function: ease-out;
+            transition-duration: 0.3s;
+            border-radius: 10%;
+            border: 7px solid white;
+            opacity: 0;
+        }
+
+        #sidebarLeft h4 {
+            font-size: 50px;
+            color: white;
+        }
