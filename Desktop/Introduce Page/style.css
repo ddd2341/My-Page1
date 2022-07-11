@@ -312,6 +312,7 @@
 
         #sidebarRight {
             top: 40%;
+            right: 10px;
             width: 60px;
             height: 150px;
             font-size: 35px;
@@ -325,9 +326,4 @@
             border-radius: 10%;
             border: 7px solid white;
             opacity: 0;
-        }
-
-        #sidebarLeft h4 {
-            font-size: 50px;
-            color: white;
         }
